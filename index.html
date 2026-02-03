@@ -2,10 +2,164 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Personal Site</title>
+  <title>Mololuwa Foluso - Personal Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Add Google Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
+  <!-- Add Font Awesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-  <!-- Add your HTML content here -->
+  <!-- Header with your name and subtitle -->
+  <header>
+    <h1>Mololuwa Foluso</h1>
+    <p class="subtitle">Aspiring Web Developer & Student</p>
+  </header>
+
+  <!-- Simple navigation menu -->
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- About Section with image and description side by side -->
+  <section id="about" class="about-section">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <!-- Profile image -->
+      <div class="profile-img">
+        <img src="img/converted_image.png" alt="Profile Photo" />
+      </div>
+      <div class="about-text">
+        <p>
+          I am a Junior Computer Science major at Kent State University with a strong foundation in problem-solving and a drive for innovation, I am eager to contribute to impactful projects and grow within the tech industry.
+        </p>
+        <div class="skills-group">
+          <h3>Technical Skills</h3>
+          <div class="skills-list">
+            <span class="skill-badge tech">
+              <span class="material-icons skill-icon">code</span>Python
+            </span>
+            <span class="skill-badge tech">
+              <span class="material-icons skill-icon">memory</span>C++
+            </span>
+            <span class="skill-badge tech">
+              <span class="material-icons skill-icon">language</span>HTML
+            </span>
+            <span class="skill-badge tech">
+              <span class="material-icons skill-icon">javascript</span>JavaScript
+            </span>
+          </div>
+          <h3>Soft Skills</h3>
+          <div class="skills-list">
+            <span class="skill-badge soft">
+              <span class="material-icons skill-icon">chat</span>Communication
+            </span>
+            <span class="skill-badge soft">
+              <span class="material-icons skill-icon">psychology</span>Problem-Solving
+            </span>
+            <span class="skill-badge soft">
+              <span class="material-icons skill-icon">autorenew</span>Adaptability
+            </span>
+            <span class="skill-badge soft">
+              <span class="material-icons skill-icon">groups</span>Teamwork
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section styled as cards -->
+  <section id="projects" class="projects-section">
+    <h2 class="section-title">My Projects</h2>
+    <div class="projects-cards">
+      <div class="project-card">
+        <h3>Producer–Consumer Problem</h3>
+        <p>
+          A C implementation of the classic synchronization problem using shared memory and semaphores in a Linux/Unix environment.
+        </p>
+        <div class="project-tags">
+          <span class="tag">C</span>
+          <span class="tag">Linux</span>
+          <span class="tag">Semaphores</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <h3>Banker's Algorithm</h3>
+        <p>
+          An implementation of the Banker's Algorithm to detect and prevent deadlocks in an operating system resource allocation model.
+        </p>
+        <div class="project-tags">
+          <span class="tag">OS Concepts</span>
+          <span class="tag">Deadlock Avoidance</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>
+          A personal portfolio developed from scratch, focusing on clean design, HCI principles, and responsiveness using AI.
+        </p>
+        <div class="project-tags">
+          <span class="tag">HTML</span>
+          <span class="tag">Bootstrap</span>
+          <span class="tag">AI</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section styled as card and badges -->
+  <section id="education" class="education-section">
+    <h2 class="section-title">Education</h2>
+    <div class="education-card">
+      <h3>Bachelor of Science in Computer Science</h3>
+      <p>
+        Kent State University, Kent, OH (Expected: Dec 2027)<br>
+        Member of The Alpha Lambda Delta Honors Society
+      </p>
+    </div>
+    <div class="coursework">
+      <h4>Relevant Coursework:</h4>
+      <div class="coursework-list">
+        <span class="course-badge">Data Structures &amp; Abstraction</span>
+        <span class="course-badge">Operating Systems</span>
+        <span class="course-badge">Computer Communications Network</span>
+        <span class="course-badge">Human Interface Computing</span>
+        <span class="course-badge">Database Design</span>
+        <span class="course-badge">Structure of Programming Languages</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section styled as in screenshot -->
+  <section id="contact" class="contact-section">
+    <h2 class="section-title">Get In Touch</h2>
+    <p class="contact-desc">
+      I'm currently seeking internship opportunities and would love to hear from you. Feel free to reach out through email or my social profiles.
+    </p>
+    <div class="contact-email">
+      <span class="contact-icon">&#9993;</span>
+      <a href="mailto:folusomololuwa@gmail.com" class="email-link">folusomololuwa@gmail.com</a>
+    </div>
+    <div class="contact-socials">
+      <a href="https://github.com/molosky4" class="social-icon" title="GitHub" target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/mololuwa-foluso-5a90a9206" class="social-icon" title="LinkedIn" target="_blank">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- Simple footer -->
+  <footer>
+    <p>&copy; 2026 Mololuwa Foluso</p>
+  </footer>
 </body>
 </html>

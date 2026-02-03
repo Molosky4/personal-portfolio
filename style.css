@@ -1,1 +1,448 @@
-/* Add you CSS here */
+/* Page background and font */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f7fafc; /* light background */
+  scroll-behavior: smooth;
+}
+
+/* Header styles */
+header {
+  background: 
+    /* Darker overlay for better text visibility */
+    linear-gradient(rgba(30, 41, 59, 0.75), rgba(30, 41, 59, 0.75)),
+    url('img/hero-bg.jpg') center center/cover no-repeat;
+  color: #fff; /* Make header text white for contrast */
+  text-align: center;
+  padding: 50px 0 30px 0; /* increased top/bottom padding for more height */
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.8em;    /* slightly larger font */
+  letter-spacing: 2px; /* more spacing between letters */
+  color: #fff; /* Ensure main heading is white */
+}
+
+.subtitle {
+  margin-top: 18px;    /* more space below name */
+  font-size: 1.3em;
+  color: #e0e7ef; /* Lighter subtitle for visibility */
+}
+
+/* Navigation styles */
+nav {
+  background: #4a5568; /* slightly lighter than header */
+  padding: 10px 0;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08); /* subtle shadow for depth */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block; /* block for better spacing */
+  margin: 0 18px; /* more space between links */
+  min-width: 80px;       /* helps with tap targets on mobile */
+  text-align: center;
+  cursor: pointer;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 14px; /* more padding for clickable area */
+  border-radius: 4px;
+  position: relative; /* for underline effect */
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+  display: inline-block; /* ensures padding and hover work well */
+}
+
+/* Responsive navigation: stack links on small screens */
+@media (max-width: 500px) {
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+  nav ul li a {
+    width: 90%;
+    min-width: unset;
+    margin: 0 auto;
+    font-size: 1.1em;
+  }
+}
+
+/* Stylish underline hover effect */
+nav ul li a::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 0;
+  background: #2b6cb0; /* blue underline */
+  border-radius: 2px;
+  position: absolute;
+  left: 50%;
+  bottom: 2px;
+  transform: translateX(-50%);
+  transition: width 0.2s;
+}
+
+nav ul li a:hover {
+  background: #2b6cb0; /* blue highlight */
+  color: #fff;
+}
+
+nav ul li a:hover::after {
+  width: 80%; /* show underline on hover */
+}
+
+/* General button styles for any <button> elements */
+button {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1em;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 6px;
+  background: #3b82f6;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+  margin: 8px 0;
+}
+
+/* Button hover effect */
+button:hover,
+button:focus {
+  background: #2563eb;
+  color: #fff;
+  outline: none;
+}
+
+/* Make project tags look clickable (optional, if you want them to act as buttons) */
+.tag {
+  display: inline-block;
+  background: #f1f5f9;
+  color: #222;
+  font-size: 0.95em;
+  font-weight: bold;
+  border-radius: 6px;
+  padding: 4px 10px;
+  margin: 2px 4px 2px 0;
+  box-shadow: 0 2px 6px rgba(44, 62, 80, 0.04);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.tag:hover {
+  background: #3b82f6;
+  color: #fff;
+}
+
+/* Section styles */
+section {
+  background: #fff;
+  margin: 30px auto;
+  padding: 20px;
+  max-width: 600px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Section headings */
+section h2 {
+  color: #2b6cb0; /* blue heading */
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 5px;
+}
+
+/* Section title with underline */
+.section-title {
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #222;
+  position: relative;
+}
+.section-title::after {
+  content: "";
+  display: block;
+  margin: 8px auto 0 auto;
+  width: 60px;
+  height: 4px;
+  background: #3b82f6;
+  border-radius: 2px;
+}
+
+/* List styles */
+ul {
+  padding-left: 20px;
+}
+
+/* Footer styles */
+footer {
+  background: #2d3748;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+  font-size: 1em;
+  border-top: 1px solid #4a5568;
+}
+
+/* About section layout: image left, text right */
+.about-section {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(44, 62, 80, 0.08);
+  padding: 40px 30px;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap; /* allows stacking on small screens */
+  align-items: center;
+  gap: 40px;
+}
+
+.profile-img {
+  flex: 1 1 220px;
+  text-align: center;
+}
+
+.profile-img img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 50%; /* make image circular */
+  box-shadow: 0 4px 24px rgba(44, 62, 80, 0.10);
+  background: #f7fafc;
+}
+
+.about-text {
+  flex: 2 1 400px;
+}
+
+.skills-group h3 {
+  margin-top: 24px;
+  margin-bottom: 8px;
+  font-size: 1.1em;
+  color: #222;
+}
+
+.skills-list {
+  margin-bottom: 12px;
+}
+
+.skill-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 16px;
+  margin: 4px 6px 4px 0;
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: bold;
+  background: #e5e7eb;
+  color: #334155;
+  transition: background 0.2s;
+}
+
+.skill-icon {
+  font-size: 1.2em;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.skill-badge.tech {
+  background: #3b82f6;
+  color: #fff;
+}
+
+.skill-badge.soft {
+  background: #6b7280;
+  color: #fff;
+}
+
+/* Responsive: stack image and text on small screens */
+@media (max-width: 700px) {
+  .about-content {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .profile-img img {
+    width: 180px;
+    height: 220px;
+  }
+}
+
+/* Projects Section */
+.projects-section {
+  background: transparent;
+  box-shadow: none;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 10px;
+}
+.projects-cards {
+  display: block; /* Use block for beginners, not flex/grid */
+  text-align: center;
+}
+.project-card {
+  display: inline-block;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(44, 62, 80, 0.08);
+  margin: 16px 12px;
+  padding: 28px 24px;
+  max-width: 340px;
+  min-width: 260px;
+  vertical-align: top;
+  text-align: left;
+}
+.project-card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.3em;
+  color: #222;
+}
+.project-card p {
+  color: #444;
+  margin-bottom: 16px;
+}
+.project-tags {
+  margin-top: 8px;
+}
+.tag {
+  display: inline-block;
+  background: #f1f5f9;
+  color: #222;
+  font-size: 0.95em;
+  font-weight: bold;
+  border-radius: 6px;
+  padding: 4px 10px;
+  margin: 2px 4px 2px 0;
+  box-shadow: 0 2px 6px rgba(44, 62, 80, 0.04);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+/* Education Section */
+.education-section {
+  background: transparent;
+  box-shadow: none;
+  max-width: 1100px;
+  margin: 60px auto 0 auto;
+  padding: 0 10px;
+  text-align: center;
+}
+.education-card {
+  background: #e7f1ff;
+  border-radius: 10px;
+  padding: 28px 24px;
+  margin: 0 auto 30px auto;
+  max-width: 900px;
+  border-left: 4px solid #3b82f6;
+  text-align: left;
+  box-shadow: 0 2px 10px rgba(44, 62, 80, 0.04);
+}
+.education-card h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.3em;
+  color: #222;
+}
+.education-card p {
+  margin: 0;
+  color: #444;
+  font-size: 1em;
+}
+.coursework {
+  margin-top: 18px;
+}
+.coursework h4 {
+  font-size: 1.1em;
+  margin-bottom: 12px;
+  color: #222;
+}
+.coursework-list {
+  margin: 0 auto;
+  max-width: 900px;
+}
+.course-badge {
+  display: inline-block;
+  background: #fff;
+  color: #222;
+  font-size: 1em;
+  border-radius: 16px;
+  padding: 8px 18px;
+  margin: 8px 10px 8px 0;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+  border: 1px solid #e5e7eb;
+}
+
+/* Contact Section */
+.contact-section {
+  background: transparent;
+  box-shadow: none;
+  max-width: 800px;
+  margin: 60px auto 0 auto;
+  padding: 0 10px 40px 10px;
+  text-align: center;
+}
+.contact-desc {
+  color: #444;
+  font-size: 1.1em;
+  margin-bottom: 30px;
+}
+.contact-email {
+  margin: 18px 0 18px 0;
+  font-size: 1.3em;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.contact-icon {
+  color: #3b82f6;
+  font-size: 1.3em;
+}
+.email-link {
+  color: #222;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+.email-link:hover {
+  text-decoration: underline;
+}
+.contact-socials {
+  margin-top: 18px;
+}
+.social-icon {
+  display: inline-block;
+  font-size: 2em;
+  margin: 0 12px;
+  color: #222;
+  text-decoration: none;
+  transition: color 0.2s;
+  vertical-align: middle;
+}
+.social-icon:hover {
+  color: #3b82f6;
+}
+
+/* Make sure Font Awesome icons are centered in the button */
+.social-icon i {
+  vertical-align: middle;
+}
